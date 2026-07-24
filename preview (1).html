@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TREE — The Silent Presence</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,sans-serif;
+    background:#07110b;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#2f8f53;
+border-radius:20px;
+}
+
+/* Background */
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#214d2f 0%,transparent 35%),
+linear-gradient(#07110b,#0f2016,#07110b);
+z-index:-5;
+}
+
+/* Floating leaves */
+
+.leaf{
+position:fixed;
+font-size:20px;
+opacity:.18;
+animation:fall linear infinite;
+pointer-events:none;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+
+}
+
+/* Navbar */
+
+nav{
+
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(15px);
+display:flex;
+justify-content:center;
+gap:50px;
+padding:18px;
+z-index:999;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#7dff9b;
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:90px;
+font-family:Cinzel,serif;
+
+letter-spacing:6px;
+
+animation:fade 2s;
+
+}
+
+.hero h3{
+
+margin-top:15px;
+
+font-weight:300;
+
+color:#9ed6aa;
+
+font-size:26px;
+
+}
+
+.hero p{
+
+margin-top:40px;
+
+max-width:700px;
+
+line-height:1.8;
+
+opacity:.8;
+
+font-size:18px;
+
+}
+
+.scroll{
+
+margin-top:60px;
+
+font-size:14px;
+
+animation:bounce 2s infinite;
+
+opacity:.7;
+
+}
+
+@keyframes bounce{
+
+50%{transform:translateY(10px);}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Sections */
+
+section{
+
+padding:120px 10%;
+
+}
+
+.title{
+
+font-size:50px;
+
+font-family:Cinzel;
+
+margin-bottom:40px;
+
+color:#7cff9b;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+transition:.5s;
+
+margin-bottom:30px;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+background:rgba(255,255,255,.08);
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.box{
+
+padding:30px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:18px;
+
+transition:.4s;
+
+}
+
+.box:hover{
+
+background:#1c3d2a;
+
+transform:scale(1.04);
+
+}
+
+.quote{
+
+font-size:35px;
+
+font-family:Cinzel;
+
+text-align:center;
+
+line-height:1.6;
+
+opacity:.9;
+
+}
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+opacity:.5;
+
+}
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#nature">Nature</a>
+<a href="#beliefs">Beliefs</a>
+<a href="#quote">Quote</a>
+
+</nav>
+
+<div class="hero">
+
+<h1>TREE</h1>
+
+<h3>The Silent Presence</h3>
+
+<p>
+There is no command.
+There is no answer.
+There is only presence.
+</p>
+
+<div class="scroll">▼ Scroll ▼</div>
+
+</div>
+
+<section id="about" class="reveal">
+
+<h2 class="title">About</h2>
+
+<div class="card">
+
+<p>
+
+TREE is a fictional deity.
+
+TREE did not create the universe.
+
+TREE has no known beginning and no known purpose.
+
+TREE does not speak.
+
+TREE does not interfere.
+
+TREE simply exists.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="nature" class="reveal">
+
+<h2 class="title">Nature</h2>
+
+<div class="grid">
+
+<div class="box">
+🌳<br><br>
+Emotionless
+</div>
+
+<div class="box">
+👁<br><br>
+Can perceive everything
+</div>
+
+<div class="box">
+🤍<br><br>
+Never judges
+</div>
+
+<div class="box">
+🔇<br><br>
+Never responds
+</div>
+
+<div class="box">
+✨<br><br>
+Performs no miracles
+</div>
+
+<div class="box">
+🌌<br><br>
+Did not create the universe
+</div>
+
+</div>
+
+</section>
+
+<section id="beliefs" class="reveal">
+
+<h2 class="title">Beliefs</h2>
+
+<div class="card">
+
+<p style="line-height:2">
+
+• No prayers.<br>
+
+• No rituals.<br>
+
+• No temples.<br>
+
+• No commandments.<br>
+
+• No holy books.<br>
+
+• No promises.<br>
+
+• No punishment.<br>
+
+• No rewards.<br>
+
+• No expectations.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="reveal">
+
+<h2 class="title">Symbol</h2>
+
+<div class="card" style="text-align:center;">
+
+<div style="font-size:120px;">
+🌳
+</div>
+
+<h3>Tree</h3>
+
+<p style="margin-top:20px;">
+The tree is simply the symbol associated with TREE.
+It is not considered sacred.
+It represents stillness and existence.
+</p>
+
+</div>
+
+</section>
+
+<section id="quote" class="reveal">
+
+<div class="quote">
+
+"Silence is not an answer.<br><br>
+Silence is simply silence."
+
+</div>
+
+</section>
+
+<footer>
+
+TREE — A fictional concept created for creative world-building.
+
+</footer>
+
+<script>
+
+// Leaves
+
+for(let i=0;i<35;i++){
+
+let leaf=document.createElement("div");
+
+leaf.className="leaf";
+
+leaf.innerHTML="🍃";
+
+leaf.style.left=Math.random()*100+"vw";
+
+leaf.style.animationDuration=8+Math.random()*10+"s";
+
+leaf.style.animationDelay=Math.random()*10+"s";
+
+leaf.style.fontSize=15+Math.random()*25+"px";
+
+document.body.appendChild(leaf);
+
+}
+
+// Reveal animation
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("active");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
